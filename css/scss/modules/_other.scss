@@ -53,3 +53,19 @@ hr {
 .relative {
   position: relative;
 }
+
+iframe {
+  width: 50em;
+  height: 400px;
+}
+
+/* All sponsor images need this property */
+
+.sponsorimg {
+  width: 180px;
+  margin: .5em 1em;
+}
+
+.bg-white {
+  background: $white; 
+}

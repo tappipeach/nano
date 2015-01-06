@@ -12,6 +12,12 @@ body {
 	padding:0;
 }
 
+.col {
+	width: 100%;
+	margin: 0;
+	padding:0;
+}
+
 header {
 	width: 100%;
 }
@@ -20,7 +26,7 @@ header {
  	width: 100%;
  	position: fixed;
  	left: -0.2em;
- 	background: url("../img/headimg.jpg");
+ 	background: url("../img/headimg.jpg") no-repeat;
  	background-size: cover;
  	top: 0;
  }
@@ -47,9 +53,22 @@ header {
 }
  aside {
  	float: right;
- 	width: 30%;
+ 	width: 30%; 
  }
 
+.video {
+	width: 100%;
+	margin:0;
+	padding:0;
+	background: $green;
+}
+
+.sponsors {
+	padding: 2em;
+	background: $white;
+	width: 80%;
+	margin: 0 auto;
+}
 // Responsive styles if needed
 // @include responsive($big-break) {
 // }
