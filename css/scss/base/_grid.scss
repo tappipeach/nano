@@ -33,7 +33,12 @@
   $margin: 2.1277%; // Margin between the grid columns
 
   .container {
-    padding: 0 40px;
+    padding: 0 30px;
+  }
+
+  .foot-container {
+    width: 100%;
+    padding: 1em;
   }
 
   .group {
@@ -60,7 +65,7 @@
 
   @for $i from 1 through 12 {
     .span#{$i} {
-      width: ($unit * $i) + ($margin * ($i - 1));
+      width: 100%;
 
       // remove float so span#'s don't stack inline.
       &.break {

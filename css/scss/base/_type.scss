@@ -20,6 +20,10 @@ blockquote {
   padding-left: 25px;
 }
 
+.indent {
+  text-indent: 2em;
+}
+
 h1,
 h2,
 h3,
@@ -108,8 +112,41 @@ a {
 
 
 // Responsive styles if needed
-// @include responsive($big-break) {
-// }
+ @include responsive($big-break) {
+
+    body {
+    font-size: 15px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4,
+  h5,
+  p,
+  ul,
+  ol {
+    font-size: 15px;
+  }
+}
+
 @include responsive($small-break) {
   body {
     font-size: 14px;

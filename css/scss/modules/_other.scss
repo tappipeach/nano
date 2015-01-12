@@ -48,6 +48,9 @@ hr {
 
 .subtle {
   color: $subtle-color;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 100%;
 }
 
 .relative {
@@ -77,6 +80,8 @@ iframe {
 
 .hex-container {
   float: left;
+  width: 600%;
+  overflow-x: hidden;
   position: absolute;
   top: 30em;
   left: -5em;
@@ -100,7 +105,7 @@ iframe {
     width: 100%; // 104px
     height: 3.750em; //
     background: #6C6;
-}
+} 
 .hex .bottom {
     width: 0;
     border-top: 1.875em solid #6C6; //30 px
@@ -122,4 +127,11 @@ iframe {
 }
 .sponsors img{
 -webkit-transition: all 1s ease;
+}
+
+/* icons */
+
+.icon-cluster {
+  width: 10em;
+  margin: 0 auto;
 }

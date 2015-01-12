@@ -10,10 +10,15 @@ html {
 body {
 	margin:0;
 	padding:0;
+	overflow-x: hidden;
 }
 
 .center {
 	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
 }
 
 .center-text {
@@ -43,8 +48,9 @@ header {
  	z-index: 0;
  }
 
-.intro { 
+.intro {  
 	margin: 0 auto;
+	width: 60%;
 	margin-top: -4em;
 	background: white;
 	padding: 3em;
@@ -78,11 +84,30 @@ article {
 	margin: 0 auto;
 }
 
-// Responsive styles if needed
+footer {
+	background: #222;
+	color: $white;
+	display: block;
+	overflow: hidden;
+}
+section {
+	float: left;
+}
+
+
+// Responsive styles
 // @include responsive($big-break) {
-// }
-// @include responsive($small-break) {
-// }
+ //}
+ @include responsive($small-break) {
+ 	.news {
+ 		width: 100%;
+ 	}
+ 	article {
+ 		width: 100%;
+ 		border-bottom: 1px solid gray;
+ 		border-size: 50%;
+ 	}
+ }
 
 // Mobile first styles if needed
 // @include mobilefirst($big-break) {
