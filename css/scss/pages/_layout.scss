@@ -1,0 +1,128 @@
+//**
+// Main Layout Styles
+//**
+
+html {
+	margin:0;
+	padding: 0;
+}
+
+body {
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.center-text {
+	text-align: center;
+}
+
+header {
+	width: 100%;
+	height: 32em;
+	overflow: hidden;
+}
+ .bg { 
+ 	width: 100%;
+ 	height: 32em;
+ 	position: fixed;
+ 	left: -0.2em;
+ 	background: url("../img/nano-group.jpg") no-repeat;
+ 	background-size: cover;
+ 	z-index: -999;
+ 	top: 0;
+ }
+
+ main {
+ 	display: block;
+ 	width: 100%;
+ 	background: white; 
+ 	z-index: 0;
+ }
+
+.intro {  
+	margin: 0 auto;
+	width: 60%;
+	margin-top: -4em;
+	background: white;
+	padding: 3em;
+	z-index: 3;
+	float: left;
+}
+
+.side {
+	width: 40%;
+	padding: 1em;
+	float: left;
+}
+
+article {
+	width: 32%;
+	padding: 2em;
+	float: left;
+	background: white;
+}
+.news {
+	width: 80%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.video {
+	width: 100%;
+	margin:0;
+	padding:1em;;
+	overflow: hidden;
+	background: #66cc66;
+}
+
+.sponsors {
+	padding: 2em;
+	background: $white;
+	width: 80%;
+	margin: 0 auto;
+}
+
+footer {
+	background: #394046;
+	color: $white;
+	overflow: hidden;
+	width: 100%;
+}
+.footer-container {
+	display: block;
+	width: 70%;
+	margin: 0 auto;
+}
+section {
+	float: left;
+}
+
+
+// Responsive styles
+// @include responsive($big-break) {
+ //}
+ @include responsive($small-break) {
+ 	.news {
+ 		width: 100%;
+ 	}
+ 	article {
+ 		width: 100%;
+ 		border-bottom: 1px solid gray;
+ 		border-size: 50%;
+ 	}
+ }
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }

@@ -1,71 +1,162 @@
+$(document).ready(function(){
 
-$(function() {
-	$(window).scroll(function () {
-		var scroll = $(window).scrollTop();
+	alert("This is a website in testing. Mind the inconsistencies");
 
-		if(scroll >= 500) {
-			$(".header").addClass('smaller');
-		} else {
-			$(".header").removeClass("smaller");
-		}
-	});
+	elements = $(".col h1, .col h4, .col p, .video h1, iframe, .sponsors h1, .sponsors p, .sponsors a").fadeTo(0, 0);
+
+$(window).scroll(function(d,h) {
+   elements.each(function(i) {
+        a = $(this).offset().top + $(this).height();
+        b = $(window).scrollTop() + $(window).height();
+        if (a < b) $(this).fadeTo(800,1);
+    });
+
 });
 
-/////////////////////////////////////////////////////
-/////// CLOCK //////////////////////////////////////
-//////////////////////////////////////////////////
+(function ($) {
 
-// What year are we in now?
-var now = new Date();
-var current_year = now.getFullYear();
-var next_year = current_year + 1;
+    var self = this, container, running=false, currentY = 0, targetY = 0, oldY = 0, maxScrollTop= 0, minScrollTop, direction, onRenderCallback=null,
+            fricton = 0.95, // higher value for slower deceleration
+            vy = 0,
+            stepAmt = 1,
+            minMovement= 0.1,
+            ts=0.1;
 
-// Set the date we're counting down to.
-var target_date = new Date("May 11, " + next_year).getTime();
- 
-// Variables for time units.
-var days, hours, minutes, seconds;
- 
-// Get the elements that will hold the numbers.
-var $days = document.getElementById("d");
-var $hours = document.getElementById("h");
-var $minutes = document.getElementById("m");
-var $seconds = document.getElementById("s");
+    var updateScrollTarget = function (amt) {
+        targetY += amt;
+        vy += (targetY - oldY) * stepAmt;
+      
+        oldY = targetY;
 
-// Calculate the countdown clock and set the HTML.
-function update() {
-    // Find the amount of "seconds" between now and target.
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
- 
-    // Do some time calculations.
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
-     
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-     
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-     
-    // Format the number strings and put them in the elements.
-    $days.innerHTML = pad(days, 2);
-    $hours.innerHTML = pad(hours, 2);
-    $minutes.innerHTML = pad(minutes, 2);
-    $seconds.innerHTML = pad(seconds, 2);
-}
 
-// Immediately update the HTML.
-// The white boxes are blank otherwise.
-update();
+    }
+    var render = function () {
+        if (vy < -(minMovement) || vy > minMovement) {
 
-// Now update our number elements every 1 second.
-setInterval(update, 1000); // 1000 milliseconds = 1 second
+            currentY = (currentY + vy);
+            if (currentY > maxScrollTop) {
+                currentY = vy = 0;
+            } else if (currentY < minScrollTop) {
+                    vy = 0;
+                    currentY = minScrollTop;
+                }
+           
+            container.scrollTop(-currentY);
 
-// This looks much better with leading zeros, don't you agree?
-// If num has less than size digits, add enough 0s to the front.
-function pad(num, size) {
-    var s = num+"";
-    while (s.length < size) s = "0" + s;
-    return s;
-}
+            vy *= fricton;
+            
+         //   vy += ts * (currentY-targetY);
+            // scrollTopTweened += settings.tweenSpeed * (scrollTop - scrollTopTweened);
+            // currentY += ts * (targetY - currentY);
+
+            if(onRenderCallback){
+                onRenderCallback();
+            }
+        }
+    }
+    var animateLoop = function () {
+        if(! running)return;
+        requestAnimFrame(animateLoop);
+        render();
+        //log("45","animateLoop","animateLoop", "",stop);
+    }
+    var onWheel = function (e) {
+        e.preventDefault();
+        var evt = e.originalEvent;
+       
+        var delta = evt.detail ? evt.detail * -1 : evt.wheelDelta / 40;
+        var dir = delta < 0 ? -1 : 1;
+        if (dir != direction) {
+            vy = 0;
+            direction = dir;
+        }
+
+        //reset currentY in case non-wheel scroll has occurred (scrollbar drag, etc.)
+        currentY = -container.scrollTop();
+        
+        updateScrollTarget(delta);
+    }
+
+    /*
+     * http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+     */
+    window.requestAnimFrame = (function () {
+        return  window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                }; 
+              
+                
+    })();
+
+    /*
+     * http://jsbin.com/iqafek/2/edit
+     */
+    var normalizeWheelDelta = function () {
+        // Keep a distribution of observed values, and scale by the
+        // 33rd percentile.
+        var distribution = [], done = null, scale = 30;
+        return function (n) {
+            // Zeroes don't count.
+            if (n == 0) return n;
+            // After 500 samples, we stop sampling and keep current factor.
+            if (done != null) return n * done;
+            var abs = Math.abs(n);
+            // Insert value (sorted in ascending order).
+            outer: do { // Just used for break goto
+                for (var i = 0; i < distribution.length; ++i) {
+                    if (abs <= distribution[i]) {
+                        distribution.splice(i, 0, abs);
+                        break outer;
+                    }
+                }
+                distribution.push(abs);
+            } while (false);
+            // Factor is scale divided by 33rd percentile.
+            var factor = scale / distribution[Math.floor(distribution.length / 3)];
+            if (distribution.length == 500) done = factor;
+            return n * factor;
+        };
+    }();
+
+
+    $.fn.smoothWheel = function () {
+        //  var args = [].splice.call(arguments, 0);
+        var options = jQuery.extend({}, arguments[0]);
+        return this.each(function (index, elm) {
+
+            if(!('ontouchstart' in window)){
+                container = $(this);
+                container.bind("mousewheel", onWheel);
+                container.bind("DOMMouseScroll", onWheel);
+
+                //set target/old/current Y to match current scroll position to prevent jump to top of container
+                targetY = oldY = container.get(0).scrollTop;
+                currentY = -targetY;
+                
+                minScrollTop = container.get(0).clientHeight - container.get(0).scrollHeight;
+                if(options.onRender){
+                    onRenderCallback = options.onRender;
+                }
+                if(options.remove){
+                    log("122","smoothWheel","remove", "");
+                    running=false;
+                    container.unbind("mousewheel", onWheel);
+                    container.unbind("DOMMouseScroll", onWheel);
+                }else if(!running){
+                    running=true;
+                    animateLoop();
+                }
+
+            }
+        });
+    };
+
+
+})(jQuery);
+
+});
