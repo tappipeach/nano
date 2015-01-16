@@ -1,0 +1,238 @@
+//**
+// Other Useful Reusable Styles
+//**
+
+* {
+  @include box-sizing(border-box !important);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.list-unstyled {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.valign {
+  vertical-align: middle;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin: $padding 0;
+<<<<<<< HEAD
+}
+=======
+} 
+>>>>>>> nanosite/master
+
+.subtle {
+  color: $subtle-color;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+<<<<<<< HEAD
+iframe {
+  width: 50em;
+  height: 400px;
+  padding: 1px;
+}
+
+=======
+>>>>>>> nanosite/master
+/* All sponsor images need this property */
+
+.sponsorimg {
+  width: 180px;
+  margin: .5em 1em;
+}
+
+.bg-white {
+  background: $white; 
+}
+
+/* Hexagons 
+* move to seperate style cheat when perfected 
+**************************************************/
+
+.hex-container {
+  float: left;
+  width: 600%;
+<<<<<<< HEAD
+  overflow-x: hidden;
+=======
+>>>>>>> nanosite/master
+  position: absolute;
+  top: 30em;
+  left: -5em;
+  z-index: -1; 
+  padding:0; 
+
+     /* pixels to percentage formula = pixel/parent(16)*100 */
+}
+.hex {
+    float: left;
+    margin-left: 0.188em; // 3px
+    margin-bottom: -1.625em; // -26px
+}
+.hex .top {
+    width: 0;
+    border-bottom: 1.875em solid #6C6; //30px
+    border-left: 3.250em solid transparent; //52px
+    border-right: 3.250em solid transparent; //52px
+}
+.hex .middle {
+    width: 100%; // 104px
+    height: 3.750em; //
+    background: #6C6;
+} 
+.hex .bottom {
+    width: 0;
+    border-top: 1.875em solid #6C6; //30 px
+    border-left: 3.250em solid transparent; //52 px
+    border-right: 3.250em solid transparent; //52px
+}
+.hex-row {
+    clear: left;
+}
+.hex-row.even {
+    margin-left: 3.313em; //53px
+}
+
+/* SPONSORS HOVER EFFECTS */
+
+.sponsors img:hover{
+-webkit-transition: all 1s ease;
+-webkit-filter:  grayscale(1);
+}
+.sponsors img{
+-webkit-transition: all 1s ease;
+}
+
+/* icons */
+
+.icon-cluster {
+  width: 10em;
+  margin: 0 auto;
+<<<<<<< HEAD
+=======
+}
+
+// POP ITEMS
+
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  padding: 2em;
+  border: 1px solid #ccc;
+  display: block;
+  width: 48%;
+  height: 13em;
+  float: left;
+  margin: 1px;
+  color: black;
+  background: linear-gradient(
+     white, white 50%, #333 50%, #333
+  );
+  background-size: 100% 202%;
+  transition: all 0.5s ease;
+  animation: down-bump 0.7s ease;
+}
+.long {
+  height: 18em;
+}
+.bump {
+  margin-top: -5em;
+}
+.bg1 {
+  background: url(../img/atlanta.jpg) no-repeat;
+  background-size: 200%;
+}
+.bg1 span.conference {
+  background: white;
+}
+  .bg1:hover {
+    span.conference {
+      background: none;
+    }
+    span.box-span {
+      background: black;
+    }
+  }
+.wide {
+  width: 68%;
+}
+.box h2 {
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+}
+.box h3 {
+  font-size: 0.8em;
+}
+  .box-span {
+  opacity: .4;
+}
+
+.box:hover {
+  background-position: 100% 100%;
+  animation: up-bump 0.4s ease;
+      .box-span {
+        opacity: 1;
+        color: #48ad26;
+    }
+}
+.box:hover h2 {
+  color: #48ad26;
+}
+.box:hover h2 span {
+  color: white;
+}
+.box:hover h3 {
+  color: #999;
+}
+
+@keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 3em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 3em; }
+>>>>>>> nanosite/master
+}

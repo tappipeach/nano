@@ -51,7 +51,7 @@ h3 {
   font-size: 1.5em;
   font-style: normal;
   font-weight: 400;
-  margin: 0 0 25px;
+  margin: 0;
 }
 
 h4 {
@@ -100,6 +100,7 @@ code {
 
 a {
   color: $primary-color;
+  text-decoration: none;
 
   &:hover,
   &:focus {

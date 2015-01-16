@@ -44,7 +44,7 @@ hr {
   border: 0;
   border-bottom: 1px solid #ddd;
   margin: $padding 0;
-}
+} 
 
 .subtle {
   color: $subtle-color;
@@ -57,12 +57,6 @@ hr {
   position: relative;
 }
 
-iframe {
-  width: 50em;
-  height: 400px;
-  padding: 1px;
-}
-
 /* All sponsor images need this property */
 
 .sponsorimg {
@@ -71,7 +65,12 @@ iframe {
 }
 
 .bg-white {
-  background: $white; 
+  background: white;
+  padding: 1em; 
+}
+
+.bg-off-white {
+  background: #fafbfc;
 }
 
 /* Hexagons 
@@ -81,7 +80,6 @@ iframe {
 .hex-container {
   float: left;
   width: 600%;
-  overflow-x: hidden;
   position: absolute;
   top: 30em;
   left: -5em;
@@ -134,4 +132,100 @@ iframe {
 .icon-cluster {
   width: 10em;
   margin: 0 auto;
+}
+
+// POP ITEMS
+
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  padding: 2em;
+  border: 1px solid #ccc;
+  display: block;
+  width: 48%;
+  height: 13em;
+  float: left;
+  margin: 1px;
+  color: black;
+  background: linear-gradient(
+     white, white 50%, #333 50%, #333
+  );
+  background-size: 100% 202%;
+  transition: all 0.5s ease;
+  animation: down-bump 0.7s ease;
+}
+.long {
+  height: 18em;
+}
+.bump {
+  margin-top: -5em;
+}
+.bg1 {
+  background: url(../img/atlanta.jpg) no-repeat;
+  background-size: 200%;
+}
+.bg1 span.conference {
+  background: white;
+}
+  .bg1:hover {
+    span.conference {
+      background: none;
+    }
+    span.box-span {
+      background: black;
+    }
+  }
+
+.bg1-foot {
+  width: 100%;
+  height: 5em;
+  background: url(../img/atlanta.jpg) no-repeat;
+  background-size: 100%;
+  margin: .5em;
+}
+.wide {
+  width: 68%;
+}
+.box h2 {
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+}
+.box h3 {
+  font-size: 0.8em;
+}
+  .box-span {
+  opacity: .4;
+}
+
+.box:hover {
+  background-position: 100% 100%;
+  animation: up-bump 0.4s ease;
+      .box-span {
+        opacity: 1;
+        color: #48ad26;
+    }
+}
+.box:hover h2 {
+  color: #48ad26;
+}
+.box:hover h2 span {
+  color: white;
+}
+.box:hover h3 {
+  color: #999;
+}
+
+@keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 3em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 3em; }
 }

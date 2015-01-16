@@ -55,18 +55,25 @@ header {
 	background: white;
 	padding: 3em;
 	z-index: 3;
+	float: left;
+}
+
+.side {
+	width: 40%;
+	padding: 1em;
+	float: left;
 }
 
 article {
 	width: 32%;
 	padding: 2em;
 	float: left;
-	background: white;
 }
 .news {
 	width: 80%;
 	margin: 0 auto;
 	overflow: hidden;
+	background: #fafbfc;
 }
 
 .video {
@@ -85,13 +92,25 @@ article {
 }
 
 footer {
-	background: #222;
+	background: #394046;
 	color: $white;
-	display: block;
 	overflow: hidden;
+	width: 100%;
+}
+.footer-container {
+	display: block;
+	width: 100%;
+}
+.foot-content {
+	width: 70%;
+	margin: 0 auto;
+	padding: 1em;
+	display: block;
 }
 section {
 	float: left;
+	padding: 0;
+	margin-left: 1.5em;
 }
 
 
