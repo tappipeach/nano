@@ -71,6 +71,7 @@ hr {
 
 .bg-off-white {
   background: #fafbfc;
+
 }
 
 /* Hexagons 
@@ -80,7 +81,7 @@ hr {
 .hex-container {
   float: left;
   width: 600%;
-  position: absolute;
+  position: fixed;
   top: 30em;
   left: -5em;
   z-index: -1; 
@@ -95,18 +96,18 @@ hr {
 }
 .hex .top {
     width: 0;
-    border-bottom: 1.875em solid #6C6; //30px
+    border-bottom: 1.875em solid $green; //30px
     border-left: 3.250em solid transparent; //52px
     border-right: 3.250em solid transparent; //52px
 }
 .hex .middle {
     width: 100%; // 104px
     height: 3.750em; //
-    background: #6C6;
+    background: $green;
 } 
 .hex .bottom {
     width: 0;
-    border-top: 1.875em solid #6C6; //30 px
+    border-top: 1.875em solid $green; //30 px
     border-left: 3.250em solid transparent; //52 px
     border-right: 3.250em solid transparent; //52px
 }
@@ -143,12 +144,14 @@ hr {
 
 .box {
   padding: 2em;
+  font-size: 100%;
   border: 1px solid #ccc;
   display: block;
   width: 48%;
   height: 13em;
   float: left;
   margin: 1px;
+  overflow: hidden;
   color: black;
   background: linear-gradient(
      white, white 50%, #333 50%, #333
