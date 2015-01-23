@@ -18,45 +18,63 @@
 		<div class="container">
 			<div class="bg">
 			</div>
-			<nav class="dropdownmenu" role="navigation">
+			<nav class="dropdownmenu" id="main-nav" role="navigation">
+				
 			 	<ul class="nav-shadow">
-			 		<li class="logo"><img src="img/tappi-logo.png" /></li>
-					<li><a href="#">Home</a></li>
+			 		
+			 		<li class="logo"><img src="img/tappi-logo.jpg" /></li>
 					<li><a href="#">About</a>
 						<ul class="submenu">
-							<li><a href="#">I like Pie</a></li>
-							<li><a href="#">Division Leadership</a></li>
-							<li><a href="#">Committees</a></li>
-							<li><a href="#">Accomplishments</a></li>
-							<li><a href="#">How to Join</a></li>
-							<li><a href="#">Contact Us</a></li>
+							<div class="inner-menu-column new">
+								<li><a href="#">Division Overview</a></li>
+								<li><a href="#">Division Leadership</a></li>
+								<li><a href="#">Committees</a></li>
+								<li><a href="#">Accomplishments</a></li>
+							</div>
+							<div class="inner-menu-column">
+								<li><a href="#" class="alert-success">How to Join</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</div>
 						</ul>
 					</li>
 					<li><a href="#">Why Nano</a>
 						<ul class="submenu">
-							<li><a href="#">Nature's Nanomaterials</a></li>
-							<li><a href="#">Applications</a></li>
-							<li><a href="#">Opportunities for Industry</a></li>
+								<li><a href="#">Nature's Nanomaterials</a></li>
+								<li><a href="#">Applications</a></li>
+								<li><a href="#">Opportunities for Industry</a></li>
 						</ul>
 					</li>
 					<li><a href="#">Conferences</a>
 						<ul class="submenu">
-							<li><a href="#">Annual Conference</a></li>
-							<li><a href="#">Past Conferences</a></li>
-							<li><a href="#">Opportunities for Students</a></li>
-							<li><a href="#">Other Events</a></li>
+							<div class="inner-menu-column new">
+								<li><a href="#">Annual Conference</a></li>
+								<li><a href="#">Past Conferences</a></li>
+								<li><a href="#">Other Events</a></li>
+							</div>
+							<div class="inner-menu-column">
+								<li><a href="#">Opportunities for Students</a></li>
+									<img src="img/tech_logo.png" alt="georgia tech tappi nano" />
+									<img src="img/unc-logo.gif" alt="georgia tech tappi nano" />
+									<img src="img/uga-logo.png" alt="georgia bulldogs tappi nano" />
+									<img src="img/utenn-logo.png" alt="georgia bulldogs tappi nano" /><br/>
+									<img src="img/tappi-logo.jpg" alt="georgia tech tappi nano" />
+									<img src="img/valmet_logo_Large.gif" alt="georgia bulldogs tappi nano" />
+							</div>
 						</ul>
 					</li>
 					<li><a href="#">Resources</a>
 						<ul class="submenu">
-							<li><a href="#">Nano360</a></li>
-							<li><a href="#">Books</a></li>
-							<li><a href="#">Databases</a></li>
-							<li><a href="#">Standards</a></li>
-							<li><a href="#">Webinars</a></li>
-							<li><a href="#">Recommended Links</a></li>
-							<li><a href="#">Videos</a></li>
-
+							<div class="inner-menu-column new">
+								<li><a href="#">Nano360</a></li>
+								<li><a href="#">Books</a></li>
+								<li><a href="#">Databases</a></li>
+								<li><a href="#">Standards</a></li>
+							</div>
+							<div class="inner-menu-column">
+								<li><a href="#">Webinars</a></li>
+								<li><a href="#">Recommended Links</a></li>
+								<li><a href="#">Videos</a></li>
+							</div>
 						</ul>
 					</li>
 					<li><a href="#">Connect</a>
@@ -66,23 +84,54 @@
 						</ul>
 					</li>
 					<li><a href="#">For Students</a>
-						<ul class="submenu">
-							<li><a href="#">Global Connect</a></li>
-							<li><a href="#">Annual Student Poster Competition</a></li>
-							<li><a href="#">Conference Travel Support</a></li>
-							<li><a href="#">For Your C.V.</a></li>
+						<ul class="submenu end">
+							<div class="inner-menu-column new">
+								<li><a href="#">For Your C.V.</a></li>
+								<div class="nav-content">
+									<img src="img/cv-img.jpg" align="center" alt="tappi nano cv resume" />
+									<span class="clear">Enhance your value in the job market. See how TAPPI Nano can help!</span>
+								</div>
+							</div>
+							<div class="inner-menu-column">
+								<li><a href="#">Global Connect</a></li>
+								<li><a href="#">Annual Student Poster Competition</a></li>
+								<li><a href="#">Conference Travel Support</a></li>
+							</div>
 						</ul>
 					</li>
+					
 				</ul>
+
+				<!--- Float Menu ---->
+
+				<ul class="nav-shadow" id="fade-menu">
+			 		<div class="center-menu">
+				 		<li class="logo"><img src="img/tappi-logo.jpg" /></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Why Nano</a></li>
+						<li><a href="#">Conferences</a></li>
+						<li><a href="#">Resources</a></li>
+						<li><a href="#">Connect</a></li>
+						<li><a href="#">For Students</a></li>
+					</div>
+				</ul>
+			
 			</nav>
+
+			<div id="nav-trigger">
+				<span>Menu</span>
+			</div>
+			<nav id="mobile-nav"></nav>
+
 		</div> 
 	</header> <!------------------- END HEADER ------------------------------------------------------------------------------------------------------------------------------------------>
 
 
 
 	<main role="main"> <!----------- BEGIN MAIN CONTENT ---------------------------------------------------------------------------------------------------------------------------------->
-					<div class="hex-container">
+		<div class="hex-container">
 					    <div class="hex-row">
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
@@ -120,8 +169,10 @@
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					    </div>
 					    <div class="hex-row">
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
@@ -159,8 +210,10 @@
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					    </div>
 					    <div class="hex-row">
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
@@ -198,8 +251,10 @@
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					    </div>
 					    <div class="hex-row">
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
@@ -237,8 +292,10 @@
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					    </div>
 					    <div class="hex-row">
+					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
@@ -259,7 +316,6 @@
 					        <div class="hex"><div class="top"></div><div class="middle"></div><div class="bottom"></div></div>
 					    </div>
 					</div>
-
 			<div class="container">
 				<div class="intro">
 					<h1>Explore Nanotechnology</h1>
@@ -310,7 +366,7 @@
 				
 
 			</div>
-</main> <!----------------- END MAIN CONTENT -------------------------------------------------------------------------------------------------------------------------------------->
+</main> <!----------------- END MAIN  -------------------------------------------------------------------------------------------------------------------------------------->
 
 		<div class="col clear bg-off-white"> 
 			<div class="news">
@@ -435,10 +491,9 @@
 			</div>		
 		</div>
 		<div class="clear">
-		<hr/>
 		</div>
 		<p class="clear text-center">&#169; 2015 TAPPI - The leading association for the worldwide pulp, paper, packaging and converting industries.</p>
-		<p class="text-center">
+		<p class="text-center off-links">
 			<a href="http://www.tappi.org/Footer/Antitrust-Policy.aspx" target="_blank">TAPPI Antitrust Policy</a>  
 			<a href="http://www.tappi.org/Footer/Link-Policy.aspx">TAPPI Link Policy</a> 
 			<a href="http://www.tappi.org/Footer/Privacy-Policy.aspx">TAPPI Privacy Policy</a> 
@@ -450,6 +505,7 @@
 	<script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
 	<script src="js/main.js"></script>
 	<script src="js/smoothscroll.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
 
 </body>
 </html>

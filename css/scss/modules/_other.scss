@@ -51,6 +51,7 @@ hr {
   font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 100%;
+  text-transform: uppercase;
 }
 
 .relative {
@@ -71,52 +72,8 @@ hr {
 
 .bg-off-white {
   background: #fafbfc;
-
 }
 
-/* Hexagons 
-* move to seperate style cheat when perfected 
-**************************************************/
-
-.hex-container {
-  float: left;
-  width: 600%;
-  position: fixed;
-  top: 30em;
-  left: -5em;
-  z-index: -1; 
-  padding:0; 
-
-     /* pixels to percentage formula = pixel/parent(16)*100 */
-}
-.hex {
-    float: left;
-    margin-left: 0.188em; // 3px
-    margin-bottom: -1.625em; // -26px
-}
-.hex .top {
-    width: 0;
-    border-bottom: 1.875em solid $green; //30px
-    border-left: 3.250em solid transparent; //52px
-    border-right: 3.250em solid transparent; //52px
-}
-.hex .middle {
-    width: 100%; // 104px
-    height: 3.750em; //
-    background: $green;
-} 
-.hex .bottom {
-    width: 0;
-    border-top: 1.875em solid $green; //30 px
-    border-left: 3.250em solid transparent; //52 px
-    border-right: 3.250em solid transparent; //52px
-}
-.hex-row {
-    clear: left;
-}
-.hex-row.even {
-    margin-left: 3.313em; //53px
-}
 
 /* SPONSORS HOVER EFFECTS */
 
@@ -144,7 +101,7 @@ hr {
 
 .box {
   padding: 2em;
-  font-size: 100%;
+  font-size: 80%;
   border: 1px solid #ccc;
   display: block;
   width: 48%;
@@ -231,4 +188,45 @@ hr {
   0% { padding-top: 2em; }
   50% { padding-top: 2.5em; }
   100% { padding-top: 3em; }
+}
+
+/* HEX */
+.hex-container {
+  float: left;
+  width: 600%;
+  position: absolute;
+  top: 30em;
+  left: -5em;
+  z-index: -1; 
+  padding:0; 
+
+     /* pixels to percentage formula = pixel/parent(16)*100 */
+}
+.hex {
+    float: left;
+    margin-left: 0.188em; // 3px
+    margin-bottom: -1.625em; // -26px
+}
+.hex .top {
+    width: 0;
+    border-bottom: 1.875em solid $green; //30px
+    border-left: 3.250em solid transparent; //52px
+    border-right: 3.250em solid transparent; //52px
+}
+.hex .middle {
+    width: 100%; // 104px
+    height: 3.750em; //
+    background: $green;
+} 
+.hex .bottom {
+    width: 0;
+    border-top: 1.875em solid $green; //30 px
+    border-left: 3.250em solid transparent; //52 px
+    border-right: 3.250em solid transparent; //52px
+}
+.hex-row {
+    clear: left;
+}
+.hex-row.even {
+    margin-left: 3.313em; //53px
 }
