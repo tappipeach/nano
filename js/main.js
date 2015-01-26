@@ -19,12 +19,12 @@ $("#mobile-nav ul ul").remove();
         $(function()
         {
               var expanded = false;
-              $("#mobile-nav").html($("#main-nav").html());
+              $("#mobile-nav").html($("#navid").html());
               $('#nav-trigger span').click(function() {
 
                           if (!expanded)
                           {
-                              $('nav#mobile-nav').animate({'left' : '0px'}, {duration : 400});
+                              $('nav#mobile-nav').animate({'left' : '-24px'}, {duration : 400});
                               expanded = true;
                           }
                           else
@@ -32,8 +32,15 @@ $("#mobile-nav ul ul").remove();
                              $('nav#mobile-nav').animate({'left' : '1200px'}, {duration: 400});
                               expanded = false;
                           }
-                      });
- });
+                      }); 
+
+        $('nav#mobile-nav .wrap').hide();
+        $('nav#mobile-nav h4').click(function() {               // click h4
+            var $this = $(this).next('nav#mobile-nav .wrap');   // find the next .wrap div after the selected h4
+            $('nav#mobile-nav .wrap').not($this).slideUp();     // if sub menu is not related to clicked h4, toggle it up
+            $this.slideToggle('fast');                          // toggle the selected menu. BAMCIS.
+        });
+ }); 
 
 
 

@@ -56,7 +56,7 @@ $fonts-dir: "../fonts/";
 [class*=" icon-"]:before {
   text-decoration: inherit;
   display: inline-block;
-  cursor: default;
+  cursor: pointer;
   speak: none;
 }
 /* makes the font 33% larger relative to the icon container */
@@ -104,9 +104,21 @@ a [class*=" icon-"] {
 }
 .icon-light {
   color: #ffffff;
+  opacity: .8;
+}
+.icon-green {
+  color: #2E8A40;
 }
 .icon-dark {
   color: #333333;
+  opacity: .8;
+  transition: opacity .15s ease-in-out;
+   -moz-transition: opacity .15s ease-in-out;
+   -webkit-transition: opacity .15s ease-in-out;
+}
+.icon-dark:hover {
+  opacity: 1;
+
 }
 .icon-border {
   border: solid 1px #eeeeee;

@@ -71,6 +71,7 @@ article {
 .news {
 	width: 80%;
 	margin: 0 auto;
+	padding: 1.5em;
 	overflow: hidden;
 	background: #fafbfc;
 }
@@ -137,7 +138,7 @@ section {
 
  	article {
  		width: 100%;
- 		border-bottom: 1px solid gray;
+ 		border-bottom: 1px dotted gray;
  		border-size: 50%;
  	}
  }
