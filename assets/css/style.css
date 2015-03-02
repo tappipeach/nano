@@ -1,0 +1,294 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+/* line 5, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, sass/_layout.scss */
+body {
+  overflow-x: hidden;
+}
+
+/* line 21, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 27, sass/_layout.scss */
+.wrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 32, sass/_layout.scss */
+.header {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 25em;
+  background: url(../img/nano-group.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* line 39, sass/_layout.scss */
+.main {
+  width: 57.74648%;
+  float: left;
+  margin-right: 1.40845%;
+  padding: 1em;
+}
+/* line 43, sass/_layout.scss */
+.main h1 {
+  text-align: center;
+}
+
+/* line 47, sass/_layout.scss */
+.side {
+  width: 40.84507%;
+  float: right;
+  margin-right: 0;
+  padding: 1em;
+}
+
+/* logo */
+/* line 6, sass/_nav.scss */
+.logo img {
+  padding: 0;
+  width: 3em;
+  background: transparent;
+  position: relative;
+}
+
+/* line 13, sass/_nav.scss */
+nav {
+  width: 100%;
+}
+
+/* line 17, sass/_nav.scss */
+nav ul {
+  color: #222;
+  float: right;
+  list-style: none;
+  display: inline-table;
+  border-radius: 6px;
+  margin: 1em;
+  padding: 0;
+  background: white;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 26%, white 55%, #eaeaea 90%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(26%, white), color-stop(55%, white), color-stop(90%, #eaeaea));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, white 26%, white 55%, #eaeaea 90%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, white 26%, white 55%, #eaeaea 90%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, white 26%, white 55%, #eaeaea 90%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 26%, #ffffff 55%, #eaeaea 90%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 36, sass/_nav.scss */
+nav ul li {
+  display: inline-table;
+  vertical-align: middle;
+  padding: 1.2em 1em;
+}
+
+/* line 41, sass/_nav.scss */
+nav ul li:hover {
+  background: #8cb869;
+  background: -moz-radial-gradient(center, ellipse cover, #8cb869 0%, #6c945b 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #8cb869), color-stop(100%, #6c945b));
+  background: -webkit-radial-gradient(center, ellipse cover, #8cb869 0%, #6c945b 100%);
+  background: -o-radial-gradient(center, ellipse cover, #8cb869 0%, #6c945b 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #8cb869 0%, #6c945b 100%);
+  background: radial-gradient(ellipse at center, #8cb869 0%, #6c945b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cb869', endColorstr='#6c945b', GradientType=1 );
+  opacity: 1;
+}
+
+/* line 53, sass/_nav.scss */
+nav a {
+  text-decoration: none;
+  color: #222;
+  padding: 1.2em;
+}
+
+/* Hide Sub-menu */
+/* line 61, sass/_nav.scss */
+nav ul ul {
+  opacity: 1;
+  z-index: -999;
+  padding: 1em;
+  position: absolute;
+}
+
+/* Show Submenu */
+/* line 69, sass/_nav.scss */
+nav ul li:hover > ul {
+  opacity: 1;
+  z-index: 100;
+}
+
+/* Submenu layout */
+/* line 76, sass/_nav.scss */
+nav ul ul li {
+  float: none;
+  position: relative;
+}
+
+/* document level */
+/* line 19, sass/_type.scss */
+html {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+@media (max-width: 800px) {
+  /* line 26, sass/_type.scss */
+  html {
+    font-size: 88.23529411764706%;
+    /* 15/17 */
+  }
+}
+@media (max-width: 500px) {
+  /* line 29, sass/_type.scss */
+  html {
+    font-size: 76.47058823529411%;
+    /* 13 / 17 */
+  }
+}
+/* modules scale with document */
+/* line 34, sass/_type.scss */
+.header {
+  font-size: 100%;
+}
+
+/* line 37, sass/_type.scss */
+.main {
+  font-size: 100%;
+}
+
+/* line 40, sass/_type.scss */
+.footer {
+  font-size: 95%;
+}
+
+/* line 43, sass/_type.scss */
+.side {
+  font-size: 97%;
+}
+
+/* headers -- type scales with modules -- use em */
+/* line 48, sass/_type.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.2em;
+  margin: 0.5em;
+}
+
+/* line 50, sass/_type.scss */
+h1 {
+  font-size: 2.5em;
+}
+
+/* line 53, sass/_type.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 56, sass/_type.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 59, sass/_type.scss */
+h4 {
+  font-size: 1.2em;
+}
+
+/* line 62, sass/_type.scss */
+h5 {
+  font-size: 1em;
+}
+
+/* line 65, sass/_type.scss */
+h6 {
+  font-size: 0.8em;
+}

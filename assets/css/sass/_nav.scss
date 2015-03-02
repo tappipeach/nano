@@ -1,0 +1,79 @@
+//===============
+// Main Nav 
+//===============
+
+	/* logo */
+	.logo img {
+		padding: 0;
+		width: 3em;
+		background: transparent;
+		position: relative;
+	}
+
+nav {
+	width: 100%;
+}
+
+nav ul {
+	color: #222;
+	float: right;
+	list-style: none;
+	display: inline-table;
+	border-radius: 6px;
+	margin: 1em;
+	padding: 0;
+
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 55%, rgba(234,234,234,1) 90%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(26%,rgba(255,255,255,1)), color-stop(55%,rgba(255,255,255,1)), color-stop(90%,rgba(234,234,234,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 26%,rgba(255,255,255,1) 55%,rgba(234,234,234,1) 90%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 26%,rgba(255,255,255,1) 55%,rgba(234,234,234,1) 90%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 26%,rgba(255,255,255,1) 55%,rgba(234,234,234,1) 90%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 26%,rgba(255,255,255,1) 55%,rgba(234,234,234,1) 90%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+}
+
+nav ul li {
+	display: inline-table;
+	vertical-align: middle;
+	padding: 1.2em 1em;
+}
+nav ul li:hover {
+	background: rgba(140,184,105,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(140,184,105,1) 0%, rgba(108,148,91,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(140,184,105,1)), color-stop(100%, rgba(108,148,91,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(140,184,105,1) 0%, rgba(108,148,91,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(140,184,105,1) 0%, rgba(108,148,91,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(140,184,105,1) 0%, rgba(108,148,91,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(140,184,105,1) 0%, rgba(108,148,91,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8cb869', endColorstr='#6c945b', GradientType=1 );
+	opacity: 1;
+}
+
+nav a {
+	text-decoration: none;
+	color: #222;
+	padding: 1.2em;
+}
+
+/* Hide Sub-menu */
+
+nav ul ul {
+	opacity: 1;
+	z-index: -999;
+	padding: 1em;
+	position: absolute;
+}
+
+/* Show Submenu */
+nav ul li:hover > ul {
+	opacity: 1;
+	z-index: 100;
+}
+
+/* Submenu layout */
+
+nav ul ul li {
+	float: none;
+	position: relative;
+}

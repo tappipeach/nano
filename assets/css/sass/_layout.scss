@@ -1,0 +1,53 @@
+// global
+body {
+	overflow-x: hidden;
+}
+
+//==================================
+// Susy Defaults (grid defintions)
+//==================================
+
+$susy: (
+	// 12 columns
+	columns: 12,
+	// width of site
+	container: 100%,
+	// use border-box model
+	global-box-sizing: border-box,
+	// define gutters (essentially default margins) 
+	gutters: 1/5
+	);
+
+@include border-box-sizing;
+
+//=====================
+// Site Layout
+//=====================
+ 
+.wrapper {
+	@include container;
+}
+
+// 7 columns wide - main
+.header {
+	@include span(12);
+	height: 25em;
+	background: url(../img/nano-group.jpg) no-repeat;
+	background-size: cover;
+}
+
+.main {
+	@include span(7);
+	padding: $padding;
+
+	h1 {
+		text-align: center;
+	}
+}
+.side {
+	@include span(5 last);
+	padding: $padding;
+}
+
+
+
